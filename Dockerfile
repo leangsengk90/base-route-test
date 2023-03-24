@@ -4,7 +4,7 @@ FROM node:latest as build
 WORKDIR /app
 
 COPY *.json ./
-RUN npm install
+RUN npm install --force
 
 COPY ./ ./
 RUN npm run build
