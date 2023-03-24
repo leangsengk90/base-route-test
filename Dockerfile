@@ -1,6 +1,6 @@
 
 # Build with NODE
-FROM node:latest as build
+FROM node:18.15.0 as build
 WORKDIR /app
 
 COPY *.json ./
