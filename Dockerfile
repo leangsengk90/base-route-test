@@ -3,10 +3,8 @@
 FROM node:18.15.0 as build
 WORKDIR /app
 
-COPY *.json ./
-RUN npm install --force
-
 COPY ./ ./
+RUN npm install --force
 RUN npm run build
 
 # Deploy on NGINX
